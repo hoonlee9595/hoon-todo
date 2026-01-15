@@ -41,12 +41,13 @@ header h1 {
 
 .input-section {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
 }
 
 #todoInput {
-    flex: 1;
+    width: 100%;
     padding: 15px 20px;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
@@ -67,6 +68,11 @@ header h1 {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
+    width: 100%;
+}
+
+#addBtn {
+    width: 100%;
 }
 
 .btn-primary {
@@ -265,4 +271,20 @@ header h1 {
 
 .todo-list::-webkit-scrollbar-thumb:hover {
     background: #764ba2;
+}
+
+/* 데스크탑에서 가로 레이아웃 */
+@media (min-width: 600px) {
+    .input-section {
+        flex-direction: row;
+    }
+    
+    #todoInput {
+        flex: 1;
+    }
+    
+    #addBtn {
+        width: auto;
+        min-width: 120px;
+    }
 }
