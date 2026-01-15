@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할일 관리 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 할일 관리</h1>
+            <p class="subtitle">오늘 해야 할 일을 관리하세요</p>
+        </header>
+
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="todoInput" 
+                placeholder="할일을 입력하세요..." 
+                autocomplete="off"
+            >
+            <button id="addBtn" class="btn btn-primary">추가</button>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">전체</button>
+            <button class="filter-btn" data-filter="active">진행중</button>
+            <button class="filter-btn" data-filter="completed">완료</button>
+        </div>
+
+        <ul id="todoList" class="todo-list"></ul>
+
+        <div class="stats">
+            <span id="todoCount">0개의 할일</span>
+            <button id="clearCompleted" class="btn-clear">완료된 항목 삭제</button>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
